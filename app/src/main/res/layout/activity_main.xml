@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/clickCounterTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/clickCounter0"
+        app:layout_constraintEnd_toStartOf="@+id/resetCounterAll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/resetCounterAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET ALL"
+        app:layout_constraintBottom_toTopOf="@+id/increaseCounter0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clickCounterTotal"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- First counter -->
+    <TextView
+        android:id="@+id/clickCounter0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/clickCounter1"
+        app:layout_constraintEnd_toStartOf="@+id/increaseCounter0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickCounterTotal" />
+    <Button
+        android:id="@+id/increaseCounter0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintBottom_toTopOf="@id/increaseCounter1"
+        app:layout_constraintEnd_toStartOf="@id/resetCounter0"
+        app:layout_constraintStart_toEndOf="@+id/clickCounter0"
+        app:layout_constraintTop_toBottomOf="@+id/resetCounterAll" />
+    <Button
+        android:id="@+id/resetCounter0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="RESET"
+        app:layout_constraintBottom_toTopOf="@id/increaseCounter1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/increaseCounter0"
+        app:layout_constraintTop_toBottomOf="@id/resetCounterAll" />
+
+    <!-- Second counter -->
+    <TextView
+        android:id="@+id/clickCounter1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/clickCounter2"
+        app:layout_constraintEnd_toStartOf="@+id/increaseCounter1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickCounter0" />
+    <Button
+        android:id="@+id/increaseCounter1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintBottom_toTopOf="@id/increaseCounter2"
+        app:layout_constraintEnd_toStartOf="@id/resetCounter1"
+        app:layout_constraintStart_toEndOf="@+id/clickCounter1"
+        app:layout_constraintTop_toBottomOf="@+id/increaseCounter0" />
+    <Button
+        android:id="@+id/resetCounter1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="RESET"
+        app:layout_constraintBottom_toTopOf="@id/increaseCounter2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/increaseCounter1"
+        app:layout_constraintTop_toBottomOf="@id/resetCounter0" />
+
+    <!-- Third counter -->
+    <TextView
+        android:id="@+id/clickCounter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/clickCounter3"
+        app:layout_constraintEnd_toStartOf="@+id/increaseCounter2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickCounter1" />
+    <Button
+        android:id="@+id/increaseCounter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintBottom_toTopOf="@id/increaseCounter3"
+        app:layout_constraintEnd_toStartOf="@id/resetCounter2"
+        app:layout_constraintStart_toEndOf="@+id/clickCounter2"
+        app:layout_constraintTop_toBottomOf="@+id/increaseCounter1" />
+    <Button
+        android:id="@+id/resetCounter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="RESET"
+        app:layout_constraintBottom_toTopOf="@id/increaseCounter3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/increaseCounter2"
+        app:layout_constraintTop_toBottomOf="@id/resetCounter1" />
+
+    <!-- Fourth counter -->
+    <TextView
+        android:id="@+id/clickCounter3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/increaseCounter3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickCounter2" />
+    <Button
+        android:id="@+id/increaseCounter3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/resetCounter3"
+        app:layout_constraintStart_toEndOf="@+id/clickCounter3"
+        app:layout_constraintTop_toBottomOf="@+id/increaseCounter2" />
+
+    <Button
+        android:id="@+id/resetCounter3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/increaseCounter3"
+        app:layout_constraintTop_toBottomOf="@id/resetCounter2" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
